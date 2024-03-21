@@ -8,3 +8,23 @@
     font-style: normal;
   }
   
+input[type=file]{
+  /* background-color: #7fffd4; */
+  color: transparent;
+
+}
+input[type=file]::-webkit-file-upload-button{
+  background-color: transparent;
+  height: 85px;
+  width:255px;
+  background-image: url("/build/img/upload_profile.png") !important;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: transparent;
+  border: none;
+  cursor: pointer;
+  
+}
+
+
