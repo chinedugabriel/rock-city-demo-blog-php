@@ -1,8 +1,9 @@
+// radio button veriable
 let showMusicalCarrier = document.getElementById("musical-carrier-yes");
 let hideMusicalCarrier = document.getElementById("musical-carrier-no");
 
 
-
+// musical carrier veriable
 let addMusicalRole = document.getElementById("input-musical-role");
 let outPutRole = document.getElementById("musical-role");
 
@@ -51,7 +52,7 @@ for(let i = 0; i < musicCarrier.length; i++){
 }
 
 
-
+// this event adds each item listed in the input to the Dom
 addMusicalRole.addEventListener("change",()=>{
     let result = addMusicalRole.value;
     arr = result.trim().split(" ");
