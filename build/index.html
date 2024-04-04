@@ -21,7 +21,7 @@
     <section class="sec-1 min-h-screen bg-yellow-200 ">
         <div class=" h-screen gird grid-cols-2">
             <div class=" bg-yellow-300 min-h-screen xl:w-9/12 w-full flex flex-col lg:justify-center items-center pt-20 px-2 md:px-14 space-y-4 sm:space-y-0">
-                <div class="heading-wrapper space-y-2 md:space-y-4 md:w-3/4 xl:w-auto ">
+                <div class="heading-wrapper space-y-3 md:space-y-4 md:w-3/4 xl:w-auto ">
                     <p class="rampart-one-regular text-2xl sm:text-3xl xl:text-6xl">
                         Rock City Music Production
                     </p>
@@ -29,7 +29,7 @@
                         Register now and be a part of the change that's taking the world by storm. 
                     </p>
                 </div>
-                <form action="" method="post" enctype="multipart/form-data" class="sm:w-auto md:w-3/4 sm:px-6  space-y-5 flex flex-col shadow-none outline-none">
+                <form action="" method="post" enctype="multipart/form-data" class="sm:w-auto md:w-3/4 md:pt-4 sm:px-6 space-y-5 flex flex-col shadow-none outline-none">
                     <input type="file" name="upload-profile-picture" id="upload-user-img" placeholder="Profile Picture"  required>
 
                     <input type="text" name="fullname" id="" placeholder="Full Name" class="bg-transparent border-b border-b-black border-rounded-b-none md:w-8/12 md:h-10 sm:px-4 md:text-xl focus:outline-none" required>
@@ -56,16 +56,16 @@
                         </div> -->
                     </div>
 
-                    <div class="input-group-wrapper md:w-9/12 md:space-x-14 space-y-3 md:space-y-0 ">
-                        <input type="text" name="country" id="" placeholder="Password" class=" bg-transparent border-b border-b-black border-rounded-b-none md:w-2/5 w-full  sm:h-10 sm:px-4 md:text-xl focus:outline-none" required>
-                        <input type="text" name="address" id="" placeholder="Confirm Password" class=" bg-transparent border-b border-b-black border-rounded-b-none md:w-2/5 w-full sm:h-10 sm:px-4 md:text-xl focus:outline-none" required>
+                    <div class="input-group-wrapper md:w-9/12 sm:space-x-1 md:space-x-14 space-y-3 md:space-y-0 ">
+                        <input type="text" name="country" id="firstPasswordInput" placeholder="Password" class=" bg-transparent border-b border-b-black border-rounded-b-none md:w-2/5 w-full  sm:h-10 sm:px-4 md:text-xl focus:outline-none" required>
+                        <input type="text" name="address" id="secondPasswordInput" placeholder="Confirm Password" class=" bg-transparent border-b border-b-black border-rounded-b-none md:w-2/5 w-full sm:h-10 sm:px-4 md:text-xl focus:outline-none" required>
                     </div>
                     <!-- password alert -->
                     <p class="text-red-700" id="password-alert">Your password doesn't match ! </p>
 
                     
 
-                    <button type="submit" class="rounded-full bg-black text-yellow-300 self-start flex justify-between items-center px-4 py-1 w-4/3">Save & Continue <img src="./img/Arrow 2.png" alt="a button with next icon arrow" class="w-1/5"></button>
+                    <button type="submit" class="rounded-full bg-black text-yellow-300 self-start flex justify-between items-center px-4 py-1 w-4/3">Save & Continue <img src="./img/Arrow 2.png" alt="a button with next icon arrow" class="w-1/5" id="register-form"></button>
 
 
                 </form>

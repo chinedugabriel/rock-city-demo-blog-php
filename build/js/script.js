@@ -10,6 +10,15 @@ let outPutRole = document.getElementById("musical-role");
 // individual carrier that is added to the DOM
 let musicCarrier = document.getElementsByClassName("music-intrest");
 
+// Password inputs
+let firstPasswordIntput = document.getElementById("firstPasswordInput");
+let secondPasswordInput = document.getElementById("secondPasswordInput");
+// Password alert veriable
+let passwordAlertText = document.getElementById('password-alert');
+
+// Registration form veriable
+// let submitButtonForResitration = document.getElementById("register-form");
+
 // this veriable carries all carrier item phased from the input..
 let arr = [];
 
@@ -65,4 +74,53 @@ addMusicalRole.addEventListener("click",()=>{
 });
 
 });
+
+
+// function that checks the password Strength
+passwordAlertText.style.display = "none";
+function passwordStrengthChecker(){
+    // this display the passwordIndicatorSection when the password input change
+    passwordAlertText.style.display = "flex";
+    
+    // this checks the characters in the password input  
+    if(firstPasswordIntput.value.length <=4){
+        // console.log("it's working");
+        passwordAlertText.innerHTML = "weak password";
+        passwordAlertText.style.color = "red";
+
+    }else if(firstPasswordIntput.value.length <=6 && /[0-9]/.test(firstPasswordIntput.value)&& /[a-z]/.test(firstPasswordIntput.value)){
+        passwordAlertText.innerHTML = "medium";
+        passwordAlertText.style.color = "yellow";
+        
+    }else if(/[\d]/.test(firstPasswordIntput.value)&& /[a-z]/.test(firstPasswordIntput.value)&& /[A-Z]/.test(firstPasswordIntput.value) && /[\b@#$%!^&*()_+=><?/['\]'{}]/.test(firstPasswordIntput.value)){
+        passwordAlertText.innerHTML = "Very strong";
+        passwordAlertText.style.color = "#564E82";
+    }
+    else if( /[a-z]/.test(firstPasswordIntput.value) && /[@#$%!^&*()_+=><?/['\]'{}]/.test(firstPasswordIntput.value)){
+        passwordAlertText.innerHTML = "strong";
+        passwordAlertText.style.color = "orange";
+        
+    }
+}
+
+// passwordStrengthChecker function is used here
+firstPasswordIntput.addEventListener('input',passwordStrengthChecker);
+
+
+function passwordMatchChecker(){
+
+    if(firstPasswordIntput.value === secondPasswordInput.value){
+        passwordAlertText.innerHTML = "Password Matched";
+        passwordAlertText.style.color = "#564E82";
+
+    }else{
+        passwordAlertText.innerHTML = "Your password doesn't match!!";
+        passwordAlertText.style.color = "red";
+
+    }
+
+}
+
+secondPasswordInput.addEventListener('input', passwordMatchChecker)
+
 
