@@ -17,7 +17,9 @@ let secondPasswordInput = document.getElementById("secondPasswordInput");
 let passwordAlertText = document.getElementById('password-alert');
 
 // Registration form veriable
-// let submitButtonForResitration = document.getElementById("register-form");
+let submitButtonForResitration = document.getElementById("register-form");
+// disabled the submit button here
+submitButtonForResitration.disabled = true;
 
 // this veriable carries all carrier item phased from the input..
 let arr = [];
@@ -112,15 +114,22 @@ function passwordMatchChecker(){
     if(firstPasswordIntput.value === secondPasswordInput.value){
         passwordAlertText.innerHTML = "Password Matched";
         passwordAlertText.style.color = "#564E82";
+        // enabled the submit button
+        submitButtonForResitration.disabled = false;
 
     }else{
         passwordAlertText.innerHTML = "Your password doesn't match!!";
         passwordAlertText.style.color = "red";
+        // disabled submit button
+        submitButtonForResitration.disabled = true;
 
     }
 
 }
 
-secondPasswordInput.addEventListener('input', passwordMatchChecker)
+secondPasswordInput.addEventListener('input', passwordMatchChecker);
+
+// the button check if the password matches before it is enabled
+submitButtonForResitration.addEventListener('click', passwordMatchChecker);
 
 
